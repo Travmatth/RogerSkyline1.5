@@ -2,7 +2,6 @@
 An AdminSys initiation
 
 ## Partie Réseau et Sécurité
-Concernant le réseau sur la VM, voici les étapes à réaliser :
 
 > Vous devez créer un utilisateur non root pour vous connecter et travailler.
 
