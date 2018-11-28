@@ -37,4 +37,8 @@ Je démarre la VM en headless désormais avec le script `VBoxHeadless -s maVM -v
 
 > Réalisez un script qui met à jour l’ensemble des sources de package, puis de vos packages et qui log l’ensemble dans un fichier nommé /var/log/update_script.log. Créez une tache plannifiée pour ce script une fois par semaine à 4h00 du matin et à chaque reboot de la machine.
 
+
+Je crée un script update_script.sh contenant `apt update && apt upgrade` et je le mv dans `/root/scripts/update_script.sh`
+J'execute `sudo crontab -e` et j'ajoute la ligne `00 4 * * 1 /root/scripts/update_script.sh` pour le démarrer le premier jour de la semaine à 4h00. Maintenant j'ajoute le script au démarrage de la machine.
+
 > Réalisez un script qui permet de surveiller les modifications du fichier /etc/crontab et envoie un mail à root si celui-ci a été modifié. Créez une tache plannifiée pour script tous les jours à minuit.
