@@ -33,6 +33,8 @@ J'ai ajouté une règle iptable qui banni les ip après un scan.
 
 > Arretez les services dont vous n’avez pas besoin pour ce projet.
 
+Je démarre la VM en headless désormais avec le script VBoxHeadless -s maVM -v on. Je ne garde que les services essentiels trouvés avec service --status-all et je coupe les autres avec systemctl stop monservice.
+
 > Réalisez un script qui met à jour l’ensemble des sources de package, puis de vos packages et qui log l’ensemble dans un fichier nommé /var/log/update_script.log. Créez une tache plannifiée pour ce script une fois par semaine à 4h00 du matin et à chaque reboot de la machine.
 
 > Réalisez un script qui permet de surveiller les modifications du fichier /etc/crontab et envoie un mail à root si celui-ci a été modifié. Créez une tache plannifiée pour script tous les jours à minuit.
