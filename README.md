@@ -4,10 +4,10 @@ An AdminSys initiation
 ## Partie Réseau et Sécurité
 Concernant le réseau sur la VM, voici les étapes à réaliser :
 
-### Vous devez créer un utilisateur non root pour vous connecter et travailler.
+> Vous devez créer un utilisateur non root pour vous connecter et travailler.
  adduser username
 
-### Utilisez sudo pour pouvoir, depuis cet utilisateur, effectuer les operations demandant des droits speciaux.
+> Utilisez sudo pour pouvoir, depuis cet utilisateur, effectuer les operations demandant des droits speciaux.
 - adduser username sudo
 
 ### Nous ne voulons pas que vous utilisiez le service DHCP de votre machine. A vous donc de la configurer afin qu’elle ait une IP fixe et un Netmask en /30.
