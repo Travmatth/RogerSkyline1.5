@@ -43,5 +43,5 @@ J'execute `sudo crontab -e` et j'ajoute la ligne `00 4 * * 1 /root/scripts/updat
 
 > Réalisez un script qui permet de surveiller les modifications du fichier /etc/crontab et envoie un mail à root si celui-ci a été modifié. Créez une tache plannifiée pour script tous les jours à minuit.
 
-Je crée un fichier check_crontab.sh utilisant md5sum pour comparer le fichier crontab à la dernière vérification de celui-ci. J'utilise `| mail contenu root` pour envoyer le mail et j'ajoute tout cela en tache cron.
+Je crée un fichier check_crontab.sh utilisant md5sum pour comparer le fichier crontab à la dernière vérification de celui-ci. Installation de mailutils. J'utilise `| mail contenu root` pour envoyer le mail et j'ajoute tout cela en tache cron.
 
