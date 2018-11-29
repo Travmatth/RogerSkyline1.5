@@ -42,3 +42,6 @@ Je crée un script update_script.sh contenant `apt update && apt upgrade` et je 
 J'execute `sudo crontab -e` et j'ajoute la ligne `00 4 * * 1 /root/scripts/update_script.sh` pour le démarrer le premier jour de la semaine à 4h00. Maintenant j'ajoute le script au démarrage de la machine.
 
 > Réalisez un script qui permet de surveiller les modifications du fichier /etc/crontab et envoie un mail à root si celui-ci a été modifié. Créez une tache plannifiée pour script tous les jours à minuit.
+
+Je crée un fichier check_crontab.sh utilisant md5sum pour comparer le fichier crontab à la dernière vérification de celui-ci. J'utilise `| mail contenu root` pour envoyer le mail et j'ajoute tout cela en tache cron.
+
