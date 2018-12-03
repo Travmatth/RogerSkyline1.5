@@ -11,3 +11,4 @@ cp resources/update_script.sh /root/scripts/
 cp resources/check_crontab.sh /root/scripts/
 crontab resources/crontab.bak
 cp resources/aliases /etc/aliases
+cp resources/html/* /var/www/html 

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+    <style>
+        .container{
+            position:relative;
+            left:50%;
+            font-family: Georgia, serif;
+        }
+        .notetitle{
+            float:left;
+            text-align:center;
+            margin-left: 8px;
+        }
+        .headnote{
+            border:2px solid slategray;
+            background-color: slategray;
+            color:white;
+            width:300px;
+            height:18px;
+        }
+        .button{
+            float:right;
+            background-color: burlywood;
+            color: brown;
+            text-align:center;
+            width:50px;
+            cursor:pointer;
+        }
+        .button:hover {
+            background-color: slategray;
+            color: white;
+        }
+        #ft_list{
+            border:2px solid slategray;
+            height:100%;
+            width:300px;
+        }
+        .ft_list_element{
+            padding: 4px;
+            margin:6px;
+            border: 1px solid lightslategray;
+            border-radius: 2px;
+        }
+    </style>
+ <script src="todo.js"></script>
+</head>
+<body onload="load_cookies();" onclick="listen_clicknote(event)">
+    <div class="container">
+        <div class="headnote">
+            <div class="notetitle">> To Do List</div>
+            <input type='button' class="button" id="btn" value="New" />
+        </div>
+        <div id="ft_list"></div>
+    </div>
+</body>
+<script>add_note();</script>
+</html>
