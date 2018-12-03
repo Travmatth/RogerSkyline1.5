@@ -1,4 +1,5 @@
-apt-get install -y vim sudo mailutils
+apt-get install -y vim sudo mailutils unzip nginx
+sh resources/ddos.sh
 usermod -aG sudo oreo
 cp resources/interfaces /etc/network/interfaces
 echo "Port 21" >> /etc/ssh/sshd_config
