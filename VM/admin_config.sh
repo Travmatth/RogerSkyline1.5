@@ -17,3 +17,4 @@ cp resources/aliases /etc/aliases
 cp resources/html/* /var/www/html
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt
 cp resources/self-signed.conf /etc/nginx/snippets/self-signed.conf
+cp resources/default /etc/nginx/sites-enabled/default
