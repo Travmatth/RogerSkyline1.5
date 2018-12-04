@@ -1,4 +1,4 @@
-apt-get install -y vim sudo mailutils unzip nginx
+apt-get install -y vim sudo mailutils unzip nginx iptables-persistent
 sh resources/ddos.sh
 usermod -aG sudo oreo
 cp resources/interfaces /etc/network/interfaces
@@ -6,6 +6,9 @@ echo "Port 21" >> /etc/ssh/sshd_config
 service ssh restart
 service networking restart
 iptables-restore < resources/iptables
+iptables-save > /etc/iptables/rules.v4
+ip6tables-save > /etc/iptables/rules.v6
+service iptables-persistent start
 mkdir /root/scripts
 cp resources/update_script.sh /root/scripts/
 cp resources/check_crontab.sh /root/scripts/
