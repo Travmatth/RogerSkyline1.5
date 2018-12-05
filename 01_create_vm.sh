@@ -19,6 +19,8 @@ VBoxManage modifyvm "$VM_NAME" \
 # If error delete the medium listed in :
 # VBoxManage list hdds
 # VBoxManage closemedium disk $UUID --delete
+# If you have a duplicate UUID error try
+# vboxmanage internalcommands sethduuid newhdd.vdi
 
 # Virtual disk creation
  VBoxManage createhd --filename "HD.$VM_NAME.vdi"  --size 8188
